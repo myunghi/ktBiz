@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/***********************
+* @auther : Lee Myung Hee
+* @since : 2016-09-20
+***********************/
+
+/*header*/
+.gnb a {color:#808080; font-weight:bold;}
+.gnb a:hover {color:red; text-decoration:underline;}

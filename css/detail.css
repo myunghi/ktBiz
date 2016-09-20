@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/***********************
+* @auther : Lee Myung Hee
+* @since : 2016-09-20
+***********************/
+
+/*header*/
+#header {position:relative; }
+#header > .gnb {position:relative; border-bottom:1px solid #ddd;}
+#header > .gnb > .gnbCtn {width:980px; margin:0 auto; padding:5px 0 6px 0; overflow:hidden;}
+#header > .gnb > .gnbCtn ul {overflow:hidden; display:inline-block;}
+#header > .gnb > .gnbCtn ul li {float:left; padding-right:10px; margin-right:10px; background:url(../images/bg/gnb_bar.png) right bottom no-repeat;}
+#header > .gnb > .gnbCtn p {float:right;}
+
+#header > .nav {position:relative; border-bottom:1px solid #ddd;}
+#header > .nav .navCtn {position:relative; width:980px; margin:0 auto; min-height:74px;}
+.nav .navCtn h1, .nav .navCtn .navList, .nav .navCtn .allehSearchbox, .nav .navCtn .allMenu {float:left;}
+.nav .navCtn h1 {width:153px; padding-top:21px;}
+.nav .navCtn .navList {width:518px;}
+.nav .navCtn .allehSearchbox {width:194px; padding-left:15px; padding-top:21px; }
+.nav .navCtn .allMenus {float:right; padding-top:21px; }
+
+.nav .navCtn ul.navList li > a {
+    display: block;
+    position: relative;
+    height: 74px;
+    text-indent: -99999em;
+    background: url(../images/gnb/nav_list.png) no-repeat;
+    z-index: 2020;}
+
+.nav .navCtn .navList li > a.mypage {width:83px; background-position: 0 0;}
+
+.nav .navCtn ul.navList li {float:left;}
+.nav .navCtn ul.navList li > div {position:absolute; left:0; top:74px; width:100%; padding:35px 0 0 0; border:1px solid red; z-index:10;}
+.nav .navCtn ul.navList li > div > div.depthTitle h3 {font-size:25px; font-weight: bold;}
+
+
+/*footer*/
+#footer {position:relative; margin-top:40px; }
+#footer > .footerNav {padding:17px 0 15px 0; border-top:1px solid #bcbcbc; border-bottom:1px solid #bcbcbc; background-color:#f8f8f8;}

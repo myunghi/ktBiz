@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import url("detail.css");
+@import url("style.css");
+
+/***********************
+* @auther : Lee Myung Hee
+* @since : 2016-09-20
+***********************/
+
+/* reset */
+* {box-sizing: border-box;}
+fieldset,img{border:0}
+/*body,table {letter-spacing: -0.025em;}*/
+body,html,legend{height:100%;color:#000}
+html{background:#fff;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+article,aside,audio,blockquote,body,canvas,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,mark,menu,nav,ol,p,pre,section,summary,td,textarea,th,time,ul,video{margin:0;padding:0;     word-break: break-all;
+    word-wrap: break-word;}
+body{background-color:#fff;font-size:12px;font-family:"맑은 고딕", Dotum,"돋움",Gulim,"굴림","Helvetica Neue",Helvetica,Arial,Verdana,Tahoma,sans-serif;line-height:14px;}
+img{vertical-align:middle}
+button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
+table{border-spacing:0;border-collapse:collapse}
+address,caption,cite,code,dfn,em,th,var{font-weight:400;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%;line-height:1}
+caption,hr,legend{width:0;height:0;font-size:1px;text-indent:-9999em;line-height:0;margin:0;padding:0;border:0;}
+hr {display:none;}
+a,a:active,a:focus,a:hover,a:link,a:visited{text-decoration:none;}
+
+.blind {display: block; position: absolute; left: -1000%; top: 0; width: 0; height: 0; font-size: 0; line-height: 0; overflow: hidden;}
+
+/*skipNavi*/
+.skipNavi{position:absolute; top:0; display:block; font-size:12px; width:100%; height:0; line-height:1em; overflow:visible; visibility: visible; z-index:6000;}
+.skipNavi a{position:absolute; top:-9999px; display:block; width:100%; padding:12px 0; font-weight:bold; text-align:center; background-color:#666;}
+.skipNavi a:hover,.skipNavi a:active,.skipNavi a:focus{position:absolute; top:0; left:0; color:#fff;}
+
+/*wrap*/
+#wrap {min-width:980px; height:auto;}
