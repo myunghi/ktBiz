@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Generator" content="EditPlus" />
+<meta name="Author-Date(Date)" content="2016-09-20" />
+<meta name="Keywords" content="올레닷컴,올레" />
+<meta name="Description" content="올레닷컴 Biz My페이지 입니다." />
+
+<script type="text/javascript" src="script/jquery.js" ></script>
+<!-- script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script -->
+<title>"올레닷컴 Biz My페이지</title>
+
+
+<script>
+
+$(function(){
+
+
+//플레이스홀더 기능x, val속성값으로 아이디, 비밀번호 입력
+//버튼을 클릭했을때, val 지워지고 포커스이동
+//input 클릭할경우 속성값 지워진다.
+
+	inputId();
+	inputPwd();
+	/*var inputId = $('.id').val('아이디');
+	var inputPwd = $('.pwd').val('비밀번호');*/
+	
+	$('button').click(function(){
+		$('#id').val("");
+		$("#id").focus();
+	});
+
+	$('input').click(function(){
+		var name = this.className;
+		$(this).val("");
+		if(name=='id'){
+			inputPwd();
+		}else{
+			inputId();
+		}
+	});	
+
+	function inputId(){
+		$('.id').val('아이디');
+	}
+	function inputPwd(){
+		$('.pwd').val('비밀번호');
+	}
+
+});
+
+	
+
+	/* $('input').click(function(){
+			var name = this.className;
+			$(this).val("");
+			if(name=='id'){
+				$('.pwd').val('1234');
+			}else{
+				$('.id').val('아이디 or 이메일');
+			}
+		});	
+
+	$('button').click(function(){
+		var inputID = $('.id').val();
+		var inputPWD = $('.pwd').val();
+		 if(inputID ==""){
+		   alert('아이디를 입력하세요');
+		   $('.id').focus();
+		 }else if(inputPWD ==""){
+			  alert('비밀번호를 입력하세요');
+			   $('.pwd').focus();
+		 }else{
+			 alert('서버로 전송');
+		 }
+	}); */
+
+
+
+
+
+	
+	/*var mh;
+	$('#id, #pwd').click(function(){
+		mh = $(this).attr('id');
+		
+		if(mh == "id"){
+			alert("아이디 입니다.");
+		}else if(mh == "pwd"){
+			alert("비밀번호 입니다.");
+		}
+
+	});*/
+
+
+
+	/*$('button').click(function(){
+		if($('#id').val() == ""){
+			$('#id').val("123000");
+		}
+	});
+	*/
+	
+	/*
+	$('button').click(function(){
+		// 아이디 없을경우
+		if($('#id').val() == ""){
+			
+
+			// 비밀번호가 없을 경우
+			if($('#pwd').val() == ""){
+				alert('두개다 없음');
+
+			// 아이디는 없고 비밀번호 있을경우
+			}else{
+				alert("아이디를 입력해주세요.");
+			}
+			
+		// 아이디가 있을 경우
+		}else {
+
+			// 비밀번호가 없을 경우
+			if($('#pwd').val() == ""){
+				alert('비밀번호를 입력해주세요');
+			}else {
+			
+				alert("로그인 성공");
+			}
+
+			
+		}
+	});
+	*/
+	
+	/*
+	$('button').click(function(){
+
+		if($('#id').val() == "" && $('#pwd').val() == ""){
+			alert('아이디 비밀번호를 입력해주세요.');
+		}else if($('#id').val() == ""){
+			alert('아이디를 입력해주세요')
+			$('#id').focus();
+
+		}else if($('#pwd').val() == ""){
+			alert('비밀번호 입력해주세요')
+		}else{
+			alert('로그인 성공')
+		}
+
+	});
+
+	*/
+	
+
+	/*
+	$('#id').focusin(function(){
+		$(this).css("background", "yellow");
+	
+	});
+
+	$('#id').focusout(function(){
+		$(this).css("background", "white");
+	});
+	
+	*/
+
+
+	/*
+	$('#id').focusin(function(){
+		$(this).val("가나다");
+	
+	});
+
+	$('#id').focusout(function(){
+		$(this).css("background", "white");
+	});
+	*/
+	
+	/*$('p').text("가나다");*/
+
+	/*alert($('.input_box').html());*/
+
+	/*
+	$("#pwd").click(function(){
+		
+		if($('#id').val() == ""){
+		  mh('#id');
+		}
+	
+	});
+	$("#id").focusout(function(){
+		mh('#id');
+	
+	});
+
+
+	$('button').click(function(){
+		
+		 mh('#pwd');
+	});
+
+
+
+function mh(obj){
+
+	
+	$('span').text("아이디를 입력하세요.");
+	$(obj).focus();
+
+}
+*/
+/*
+$("#pwd").click(function(){
+		$(this).hide()
+	});
+$("#id").hover(function(){
+	$('#pwd').hide();
+});
+$("#id").mouseout(function(){
+	$('#pwd').show();
+});
+*/
+/*
+
+$('#id').click(function(){
+	alert(this.className)
+	alert($(this).attr('class'));
+
+});
+
+*/
+
+/*
+$('button').click(function(){
+	$(this).prev('input').hide();
+	$(this).next('button').hide();
+});
+*/
+/*
+$('ul li').click(function(){
+	$('li').eq(5).css('background', 'yellow');
+	alert($('li').size());
+
+	
+});
+*/
+
+
+
+
+
+
+
+/*var array = ['galaxy', 'iphone', 'lg', 'sony'];
+var array2 = [['galaxy', 'iphone'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony']];
+
+
+alert(array2[1][1]); */
+
+
+
+
+
+
+
+
+</script>
+
+</head>
+
+<body>
+
+<div class="input_box">
+	<p>로그인</p>
+	<input type="text" id="id" class="id" value="" name="inputId" maxlength="" title="아이디"  style="border:1px solid red; display:inline-block; ">
+	<span></span>
+	<input type="password" id="pwd" class="pwd" value="" name="inputPwd" maxlength="" title="아이디"  style="border:1px solid red; margin-top:10px;">
+	<button>버튼</button>
+</div>
+
+
+
+
+<!--ul>
+	<li>가나다</li>
+	<li>ㅁㄴㅇㄴㅁㅇ</li>
+	<li>1111</li>
+	<li>5555</li>
+	<li>66666</li>
+	<li>9999</li>
+</ul-->
+</body>
+</html>
