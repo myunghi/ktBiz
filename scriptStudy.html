@@ -11,7 +11,29 @@
 <script type="text/javascript" src="script/jquery.js" ></script>
 <!-- script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script -->
 <title>"올레닷컴 Biz My페이지</title>
+<style>
+.input_box {
+    position: relative;
+    margin: 10px 10px;
+	
+}
+.input_box label {
+    color: #666;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    font-size: 12px;
+    cursor: text;
+	padding:10px 0;
+}
+.input_box input[type="text"] {
+    border: 1px solid #999;
+    width: 200px;
+    padding: 10px 15px;
+    box-sizing: border-box;
 
+}
+</style>
 
 <script>
 
@@ -22,36 +44,150 @@ $(function(){
 //버튼을 클릭했을때, val 지워지고 포커스이동
 //input 클릭할경우 속성값 지워진다.
 
-	inputId();
-	inputPwd();
-	/*var inputId = $('.id').val('아이디');
-	var inputPwd = $('.pwd').val('비밀번호');*/
+   /* label
+   
+	var placeholderTarget = $(".input_box input[type=text]");
+
+    placeholderTarget.focus(function(){
+        $(this).siblings("label").fadeOut("");
+    });
+
+    placeholderTarget.focusout(function(){
+        if($(this).val() == ""){
+            $(this).siblings("label").fadeIn("");
+        }
+    });
+
+	*/
+	
+	/*
+	if($('#id').val() == ""){
+		$('#id').val('아이디');
+		$('#id').css('color', '#999');
+
+		$('#id').focusin(function(){
+		if($(this).val() == ""){
+		 $(this).val();
+		}else{
+			$(this).val('아이디');
+		}
+		
+		});
+
+		$('#id').focusout(function(){
+		if($(this).val() != ""){
+		 $(this).val();
+		}else {
+			$(this).val('아이디');
+		}
+		});
+	};
+	*/
+
+	if($('#id').val() == ""){
+	
+		mh('#id', '아이디');
+
+	};
+
+	if($('#pwd').val() == ""){
+	
+		mh('#pwd', '비번');
+
+	};
+
+function mh(obj, atr){
+	$(obj).val(atr);
+		
+		$(obj).focusin(function(){
+		if($(this).val() == atr){
+			$(obj).val("");
+		} else {
+			$(obj).val();
+		}
+		});
+
+		$(obj).focusout(function(){
+		if($(this).val() == ""){
+			$(obj).val(atr);
+		} else {
+			$(obj).val();
+		}
+		});
+}
+
 	
 	$('button').click(function(){
-		$('#id').val("");
-		$("#id").focus();
+		 if($('#id').val() == "아이디"){
+			if($('#id').val() != "아이디"){
+			}else{
+				$('#id').focus().val("");
+				$('#id').css("color", "#000");
+			}
+		}else 
+			if ($('#pwd').val() == "비번"){
+				if($('#pwd').val() != "비번"){
+					
+				}else{
+					$('#pwd').focus().val("");
+					$('#pwd').css("color", "#000");
+				}
+		}else{
+			alert('로그인 성공');
+		}
 	});
 
-	$('input').click(function(){
-		var name = this.className;
-		$(this).val("");
-		if(name=='id'){
-			inputPwd();
-		}else{
-			inputId();
-		}
-	});	
 
-	function inputId(){
-		$('.id').val('아이디');
+
+
+
+	/*
+	
+	for(var n=1; n<10; n++){
+		for(var k=1; k<10; k++){
+			alert(n+'*'+k+'='+n*k);
+			
+			if(n == 5 && k == 3){
+				alert('hi')
+			}
+		} 
+		
+	
+		
 	}
-	function inputPwd(){
-		$('.pwd').val('비밀번호');
-	}
+
+	*/
+
+
+
 
 });
 
 	
+
+	/* $('input').click(function(){
+			var name = this.className;
+			$(this).val("");
+			if(name=='id'){
+				$('.pwd').val('1234');
+			}else{
+				$('.id').val('아이디 or 이메일');
+			}
+		});	
+
+	$('button').click(function(){
+		var inputID = $('.id').val();
+		var inputPWD = $('.pwd').val();
+		 if(inputID ==""){
+		   alert('아이디를 입력하세요');
+		   $('.id').focus();
+		 }else if(inputPWD ==""){
+			  alert('비밀번호를 입력하세요');
+			   $('.pwd').focus();
+		 }else{
+			 alert('서버로 전송');
+		 }
+	}); */
 
 
 
@@ -83,7 +219,6 @@ $(function(){
 	$('button').click(function(){
 		// 아이디 없을경우
 		if($('#id').val() == ""){
-			
 
 			// 비밀번호가 없을 경우
 			if($('#pwd').val() == ""){
@@ -235,7 +370,15 @@ var array2 = [['galaxy', 'iphone'], ['lg', 'sony'], ['lg', 'sony'], ['lg', 'sony
 
 alert(array2[1][1]); */
 
+/*
+var array = ['galaxy', 'iphone', 'lg', 'sony'];
 
+for(var n=0; n<4; n++){
+	 
+	 alert(array[n]);
+	
+	} 
+*/
 
 
 
@@ -246,15 +389,19 @@ alert(array2[1][1]); */
 
 </head>
 
-<body>
+<body
 
+<p>로그인</p>
 <div class="input_box">
-	<p>로그인</p>
-	<input type="text" id="id" class="id" value="" name="inputId" maxlength="" title="아이디"  style="border:1px solid red; display:inline-block; ">
+	<!-- label for="id">Id</label -->
+	<input type="text" id="id" class="id1" value="" name="inputId" maxlength="" title="아이디">
 	<span></span>
-	<input type="password" id="pwd" class="pwd" value="" name="inputPwd" maxlength="" title="아이디"  style="border:1px solid red; margin-top:10px;">
-	<button>버튼</button>
 </div>
+<div class="input_box">
+	<!-- label for="pwd">Pwd</label -->
+	<input type="text" id="pwd" class="pwd2" value="" name="inputPwd" maxlength="" title="비밀번호" >
+</div>
+<button>버튼</button>
 
 
 

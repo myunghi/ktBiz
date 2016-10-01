@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<script type="text/javascript" src="script/jquery.js" ></script>
+	
+	<style>
+		
+		div.blind {width:100%;height:50px;display:none;background:#000;color:#fff}
+		.link.on + .blind {display:block;}
+	</style>
+	<script>
+		$(function(){
+			/*$('.link').click(function(){
+				var cls = $(this).find('span');
+				alert(cls.hasClass('korea'));
+				return false;
+			});*/
+
+
+			/*$('.link > a').click(function(){
+				$('.blind').2016-09-28();
+				return false;
+			});
+			*/
+
+		
+			/*$('div').click(function(){
+				$(this).addClass('on');
+				/*$('.on + .blind').slideDown();*/
+			/*	if ($(this).className == 'on')
+				{
+					$('.blind').css("display", "block");
+				}else {
+					$('.blind').css("display", "none");
+				}
+			});*/	
+		
+			/*var name = this.className;
+	
+				if(name=='on'){
+					$('.blind').css("display", "block");
+				}else{
+					$('.blind').css("display", "none");
+				}
+			*/
+			
+			/*
+			
+			
+			$("div").click(function(){
+				$(this).addClass('on');
+				
+				if($(this).next('.blind').css == ("display", "block"))
+				{
+					$('div').removeClass('on');
+				} 
+
+			});
+
+			*/
+			$(".link").click(function(){
+
+				$(".link + .blind").slideUp();
+				
+				if($(this).next().attr != "visible")
+				{
+					$(this).next().slideDown();
+				} 
+
+			});
+
+
+		});
+	</script>
+ </head>
+ <body>
+<div class="link">
+	<a href="###"><span class="">안녕하세요.</span></a>
+</div>
+<div class="blind">이명희입니다.</div>
+
+<div class="link">
+	<a href="###">또이또이</a>
+</div>
+<div class="blind">개긴도긴</div>
+
+
+<div class="link">
+	<a href="###">첫출근</a>
+</div>
+<div class="blind">떨립니다.</div>
+
+<div class="link">
+	<a href="###">광원쌤</a>
+</div>
+<div class="blind">메롱!!</div>
+
+<div class="link">
+	<a href="###">이럴수가</a>
+</div>
+<div class="blind">저럴수가</div>
+
+
+  
+ </body>
+</html>
